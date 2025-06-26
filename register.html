@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coisas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/login-register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2>GHOST</h2>
+
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="contact.html">Contato</a>
+            <a class="nav-link" href="about.html">Sobre</a>
+            <a class="nav-link" href="main.html">Explorar</a>
+            <a class="nav-link" href="profile.html">Perfil</a>
+        </nav>
+    </header>
+    
+    <main class="main-center">
+        <form action="main.html" method="get" class="login-form">
+            <div>
+                <label for="username">Nome de usuário:</label>
+                <input type="text" id="username" name="reg-username">
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="reg-email">
+            </div>
+
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="reg-password">
+            </div>
+            <div>
+                <label for="confirm-password">Confirme sua senha:</label>
+                <input type="password" id="confirm-password" name="reg-confirm-password">
+            </div>
+
+            <input type="hidden" name="reg" value="true">
+
+            <input type="submit" value="Cadastrar" id="login-button">
+
+            <p id="register-msg">Já tem uma conta? <a href="login.html">Entre!</a></p>
+
+            <div id="warn" class="warning hidden"></div>
+        </form>
+        
+        <span class="final-span-reg"></span>
+    </main>
+
+    <script>
+        const urlParams = new URL(location.href).searchParams;
+
+        if (urlParams.has('msg')) {
+            const msgTag = document.getElementById('warn');
+            msgTag.innerHTML = urlParams.get('msg');
+            msgTag.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

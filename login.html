@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coisas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/login-register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2>GHOST</h2>
+
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="contact.html">Contato</a>
+            <a class="nav-link" href="about.html">Sobre</a>
+            <a class="nav-link" href="main.html">Explorar</a>
+            <a class="nav-link" href="profile.html">Perfil</a>
+        </nav>
+    </header>
+    
+    <main class="main-center">
+        <form action="main.html" method="get" class="login-form">
+            <div>
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <input type="hidden" name="reg" value="false">
+
+            <input type="submit" value="Entrar" id="login-button">
+
+            <p id="register-msg">Não tem uma conta? <a href="register.html">Registre-se!</a></p>
+
+            <div id="warn" class="warning hidden"></div>
+        </form>
+        
+        <span class="final-span"></span>
+    </main>
+
+    <script>
+        const urlParams = new URL(location.href).searchParams;
+
+        if (urlParams.has('msg')) {
+            const msgTag = document.getElementById('warn');
+            msgTag.innerHTML = urlParams.get('msg');
+            msgTag.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

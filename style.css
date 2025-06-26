@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+* {
+    font-family: "Alumni Sans", sans-serif;
+}
+
+/* Main */
+
+main {
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    animation: 5s colors-alterning infinite alternate;
+    padding-left: 5vw;
+    background-image: url('');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+.main-center {
+    align-items: center;
+}
+
+.final-span {
+    height: 30%;
+}
+
+.main-div-headers {
+    line-height: 0.5;
+    font-family: "Alumni Sans", sans-serif;
+    color: #223a03;
+}
+
+.login-button {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    width: min-content;
+}
+
+.login-button > span {
+    margin-left: 1vw;
+    font-size: 1.2rem;
+    font-family: "Alumni Sans", sans-serif;
+}
+
+#menu {
+    cursor: pointer;
+}
+
+@keyframes colors-alterning {
+    0% {
+        background-color: #CEE1DF;
+    }
+
+    50% {
+        background-color: #d5c5de;
+    }
+
+    100% {
+        background-color: #c6b4d1;
+    }
+}

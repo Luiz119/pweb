@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login-register.css">
+    <link rel="stylesheet" href="css/create_post.css">
+</head>
+<body>
+    <header>
+        <h2>GHOST</h2>
+
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="contact.html">Contato</a>
+            <a class="nav-link" href="about.html">Sobre</a>
+            <a class="nav-link" href="main.html">Explorar</a>
+            <a class="nav-link" href="profile.html">Perfil</a>
+        </nav>
+    </header>
+
+    <main class="main-center">
+        <form class="login-form">
+            <div> 
+                <label for="input-title">Título:</label>
+                <input type="text" id="input-title" required>
+            </div>
+
+            <div>
+                <label for="input-content">Conteúdo:</label>
+                <textarea type="text" id="input-content" rows="6" required></textarea>
+            </div>
+
+            <div>
+                <label for="input-author">Autor:</label>
+                <input type="text" id="input-author" required>
+            </div>
+
+            <div>
+                <label for="input-thumbnail">URL thumbnail (necessário estar na web):</label>
+                <input type="text" id="input-thumbnail" placeholder="Se não houver, usa-se o padrão">
+            </div>
+
+            <button type="button" onclick="createPost()" id="login-button">Criar</button>
+        </form>
+    </main>
+
+    <script src="js/create_post.js"></script>
+</body>
+</html>

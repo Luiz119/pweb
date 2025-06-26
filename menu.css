@@ -1,0 +1,29 @@
+.hidden {
+    display: none;
+}
+
+#table-menu {
+    position: absolute;
+    right: 6vw;
+    top: 8vh;
+    background-color: #b1cba6;
+}
+
+#table-menu td {
+    background-color: #eff7eb;
+}
+
+#table-menu button {
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    font-style: italic;
+    transition: .2s;
+}
+
+#table-menu button:hover {
+    background-color: #0001;
+    transition: .2s;
+}

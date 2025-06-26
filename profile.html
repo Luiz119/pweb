@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login-register.css">
+</head>
+
+<body>
+    <header>
+        <h2>GHOST</h2>
+
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="contact.html">Contato</a>
+            <a class="nav-link" href="about.html">Sobre</a>
+            <a class="nav-link" href="main.html">Explorar</a>
+            <a class="nav-link" href="profile.html">Perfil</a>
+        </nav>
+    </header>
+
+    <main class="main-center">
+        <form class="login-form">
+            <div> 
+                <label for="security-input-name">Nome atual de usuário: </label>
+                <input type="text" id="security-input-name" required>
+            </div>
+
+            <div>
+                <label for="security-input-password">Senha atual: </label>
+                <input type="password" id="security-input-password" required>
+            </div>
+
+            
+            <div>
+                <label for="input-email">Novo nome de usuário: </label>
+                <input type="text" id="input-username">
+            </div>
+
+            <div>
+                <label for="input-email">Novo e-mail: </label>
+                <input type="email" id="input-email">
+            </div>
+
+            <div>
+                <label for="input-password">Nova senha: </label>
+                <input type="password" id="input-password">
+            </div>
+
+            <div>
+                <label for="input-confirm-password">Confirmar senha: </label>
+                <input type="password" id="input-confirm-password">
+            </div>
+
+            <button type="button" onclick="processChanges()" id="login-button">Salvar</button>
+            <button type="button" onclick="removeUser()" id="login-button">Remover</button>
+
+            <div id="warn" class="warning hidden"></div>
+            
+            <div id="sucess-msg" class="sucess hidden"></div>
+        </form>
+    </main>
+    
+    <script src="js/profile.js"></script>
+</body>
+</html>
